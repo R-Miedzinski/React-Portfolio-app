@@ -52,7 +52,7 @@ export default function Portfolio(props) {
         id="s-portfolio"
         navname="Portfolio"
       >
-        <Carousel className={classes["s-portfolio__carousel"]}>
+        <Carousel className={classes["s-portfolio__carousel"]} range={3}>
           {projects.map((project) => {
             return (
               <ProjectCard
