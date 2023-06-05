@@ -1,0 +1,35 @@
+// colors
+$c-main: goldenrod;
+$c-secondary: darkblue;
+$c-gray: #333;
+$c-gray-light: #aaa;
+$c-bg: #444;
+$c-bg-light: #eee;
+
+// fonts
+$fs-default: 1.6rem;
+$fc-default: $c-gray;
+$fc-light: $c-gray-light;
+$fc-error: red;
+
+//spacing:
+$gap: 0.1rem;
+$lh-default: 1.6;
+
+$g-1: 6 * $gap;
+$g-2: 10 * $gap;
+$g-3: 16 * $gap;
+$g-4: 24 * $gap;
+$g-5: 32 * $gap;
+$g-6: 40 * $gap;
+$g-7: 48 * $gap;
+$g-8: 56 * $gap;
+$g-9: 64 * $gap;
+$g-10: 80 * $gap;
+
+//bg radius
+$bg-r-small: 5px;
+$bg-r-medium: 10px;
+$bg-r-big: 20px;
+$bg-radius-huge: 30px;
+$bg-r-inf: 99999px;
