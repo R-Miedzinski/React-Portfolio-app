@@ -1,4 +1,7 @@
 // colors
+$c-black: #000;
+$c-white: #fff;
+
 $c-main: goldenrod;
 $c-secondary: darkblue;
 $c-gray: #333;
@@ -8,6 +11,8 @@ $c-bg-light: #eee;
 
 // fonts
 $fs-default: 1.6rem;
+$fs-small: 1rem;
+
 $fc-default: $c-gray;
 $fc-light: $c-gray-light;
 $fc-error: red;
@@ -16,6 +21,7 @@ $fc-error: red;
 $gap: 0.1rem;
 $lh-default: 1.6;
 
+$g-0: 3 * $gap;
 $g-1: 6 * $gap;
 $g-2: 10 * $gap;
 $g-3: 16 * $gap;
@@ -31,5 +37,5 @@ $g-10: 80 * $gap;
 $bg-r-small: 5px;
 $bg-r-medium: 10px;
 $bg-r-big: 20px;
-$bg-radius-huge: 30px;
+$bg-r-huge: 30px;
 $bg-r-inf: 99999px;
