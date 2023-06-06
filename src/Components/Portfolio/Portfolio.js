@@ -14,6 +14,7 @@ const DUMMY_PROJECTS = [
       "Some project I worked on, one of many, go and see others Some project I worked on, one of many, go and see others",
     techStack: ["HTML", "CSS", "JavaScript"],
     category: "FrontEnd",
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     id: "2",
@@ -22,6 +23,7 @@ const DUMMY_PROJECTS = [
     description: "Some project I worked on, one of many, go and see others",
     techStack: ["HTML", "CSS", "JavaScript"],
     category: "FrontEnd",
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     id: "3",
@@ -30,6 +32,7 @@ const DUMMY_PROJECTS = [
     description: "Some project I worked on, one of many, go and see others",
     techStack: ["HTML", "CSS", "JavaScript"],
     category: "Science",
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     id: "4",
@@ -38,6 +41,7 @@ const DUMMY_PROJECTS = [
     description: "Some project I worked on, one of many, go and see others",
     techStack: ["HTML", "CSS", "JavaScript"],
     category: "GameDev",
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     id: "5",
@@ -46,6 +50,7 @@ const DUMMY_PROJECTS = [
     description: "Some project I worked on, one of many, go and see others",
     techStack: ["HTML", "CSS", "JavaScript"],
     category: "FrontEnd",
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     id: "6",
@@ -54,6 +59,7 @@ const DUMMY_PROJECTS = [
     description: "Some project I worked on, one of many, go and see others",
     techStack: ["HTML", "CSS", "JavaScript"],
     category: "GameDev",
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     id: "7",
@@ -62,6 +68,7 @@ const DUMMY_PROJECTS = [
     description: "Some project I worked on, one of many, go and see others",
     techStack: ["HTML", "CSS", "JavaScript"],
     category: "Science",
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     id: "8",
@@ -70,6 +77,7 @@ const DUMMY_PROJECTS = [
     description: "Some project I worked on, one of many, go and see others",
     techStack: ["HTML", "CSS", "JavaScript"],
     category: "GameDev",
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     id: "9",
@@ -78,6 +86,7 @@ const DUMMY_PROJECTS = [
     description: "Some project I worked on, one of many, go and see others",
     techStack: ["HTML", "CSS", "JavaScript"],
     category: "FrontEnd",
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
   {
     id: "10",
@@ -86,6 +95,7 @@ const DUMMY_PROJECTS = [
     description: "Some project I worked on, one of many, go and see others",
     techStack: ["HTML", "CSS", "JavaScript"],
     category: "GameDev",
+    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
   },
 ];
 

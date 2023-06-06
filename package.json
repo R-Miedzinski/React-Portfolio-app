@@ -36,5 +36,10 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@ionic/react": "^7.0.10",
+    "ionicons": "^7.1.2",
+    "react-ionicons": "^4.2.0"
   }
 }

@@ -1,1 +1,68 @@
 @import "../../Sass/Variables";
+
+.s-footer {
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  &__linkBox,
+  &__contactBox,
+  &__iconBox {
+    border: 1px solid $c-black;
+    margin: $g-1;
+  }
+
+  &__linkBox,
+  &__contactBox {
+    justify-self: center;
+    width: 50%;
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: $g-1;
+    }
+
+    a:link,
+    a:visited {
+      color: $c-secondary;
+    }
+
+    a:hover,
+    a:active {
+      color: $c-main;
+    }
+  }
+
+  &__iconBox {
+    justify-self: center;
+    grid-column: 1 / -1;
+    width: 50%;
+
+    ul {
+      display: flex;
+      justify-content: center;
+      gap: $g-4;
+    }
+
+    a:link,
+    a:visited {
+      color: $c-secondary;
+      font-size: 0;
+    }
+
+    a:hover,
+    a:active {
+      color: $c-main;
+    }
+
+    ion-icon {
+      // margin-bottom: -1.6rem;
+      height: 5rem;
+      width: 5rem;
+    }
+  }
+}
