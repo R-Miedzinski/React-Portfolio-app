@@ -1,0 +1,20 @@
+@import "../../Sass/Variables";
+
+.s-about {
+  &__content-box {
+    display: flex;
+    gap: $g-3;
+    justify-content: space-between;
+  }
+
+  // &__info-box {
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: $g-1;
+
+  //   ul {
+  //     display: grid;
+  //     grid-template-columns: 1fr 1fr;
+  //   }
+  // }
+}

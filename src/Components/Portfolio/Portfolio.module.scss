@@ -1,0 +1,20 @@
+@import "../../Sass/Variables";
+
+.s-portfolio {
+  &__carousel {
+    width: 80%;
+    height: 40rem;
+
+    margin: 0rem auto;
+    color: $fc-light;
+    // background-color: $c-bg;
+    border: 1px solid $c-secondary;
+
+    display: flex;
+    justify-content: space-between;
+    gap: $g-7;
+
+    position: relative;
+    overflow: hidden;
+  }
+}

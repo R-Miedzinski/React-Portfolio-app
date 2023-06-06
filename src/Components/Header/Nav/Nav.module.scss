@@ -1,1 +1,60 @@
 @import "../../../Sass/Variables";
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 3rem 6rem;
+  background-color: $c-bg;
+
+  color: $fc-light;
+}
+
+// img {
+// }
+
+// nav {
+// }
+
+ul {
+  display: flex;
+  justify-content: space-around;
+  gap: $g-2;
+}
+
+// li {
+//   display: inline-block;
+// }
+
+a:link,
+a:visited {
+  // position: inherit;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background-color: $c-bg-light;
+  border-radius: $bg-r-medium;
+  border: 3px solid $c-main;
+  box-shadow: 0 10px 5px rgba($c-black, 50%);
+
+  color: $c-main;
+  font-weight: bold;
+
+  transition: all 0.3s ease-in;
+}
+
+a:hover {
+  background-color: $c-main;
+  border-color: $c-secondary;
+  box-shadow: 0 10px 20px rgba($c-black, 50%);
+
+  color: $c-secondary;
+
+  transform: translateY(-10%);
+}
+
+a:active {
+  background-color: darken($c-main, 10%);
+  box-shadow: 0 10px 10px rgba(darken($c-main, 30%), 50%);
+
+  transform: translateY(-5%);
+}

@@ -1,0 +1,58 @@
+@import "../../Sass/Variables";
+
+.c-card {
+  width: 33%;
+  height: 40rem;
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  gap: $g-2;
+
+  padding: $g-5 2 * $g-5;
+  background-color: $c-bg;
+  border-radius: $bg-r-big;
+  margin: 0 auto;
+
+  transition: 1s transform;
+  backface-visibility: hidden;
+
+  // &__img {
+  // }
+
+  // &__title {
+  // }
+
+  // &__description {
+  // }
+
+  &__stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $g-1;
+
+    margin-top: auto;
+  }
+
+  &__tech {
+    // flex-basis: 25%;
+    padding: $g-0 $g-1;
+
+    background-color: $c-bg-light;
+    border: 1px solid $c-secondary;
+    border-radius: $bg-r-big;
+
+    text-align: center;
+    color: $c-secondary;
+    font-size: $fs-small;
+  }
+
+  & {
+    z-index: calc(var(--range) - var(--zIndex));
+
+    opacity: var(--opacity);
+
+    right: 50%;
+    transform: translateX(var(--translationX)) scale(var(--scale));
+  }
+}
