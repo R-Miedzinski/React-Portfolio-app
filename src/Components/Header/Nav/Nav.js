@@ -18,14 +18,14 @@ export default function Nav(props) {
   }, []);
 
   return (
-    <div className={classes["nav"]}>
+    <div className={classes["nav"]} style={props.style}>
       <img src={logo} alt="Img in header, logo" />
       <nav>
         <ul>
           {navigableSections.map((section) => {
             return (
-              <li>
-                <Button key={section.id} href={`#${section.id}`}>
+              <li key={section.id}>
+                <Button href={`#${section.id}`}>
                   {section.getAttribute("navname")}
                 </Button>
               </li>

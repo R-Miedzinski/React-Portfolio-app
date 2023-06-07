@@ -1,10 +1,30 @@
 @import "Sass/Variables";
 
+::-webkit-scrollbar {
+  width: $g-1;
+  height: 200vh;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $c-bg-light;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $c-gray;
+  border-radius: $bg-r-inf;
+}
+
 html {
   font-size: 62.5%;
+
   overflow-x: hidden;
+  overflow-y: auto;
 
   background-color: $c-bg-light;
+}
+
+html[overflow="hidden"] {
+  overflow: hidden;
 }
 
 body {
@@ -43,6 +63,10 @@ a:link,
 a:visited {
   text-decoration: none;
   color: $fc-default;
+}
+
+#root {
+  position: relative;
 }
 
 .container {

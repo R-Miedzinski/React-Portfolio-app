@@ -1,0 +1,66 @@
+@import "../../../Sass/Variables";
+
+.nav {
+  z-index: 1000;
+  text-align: center;
+
+  width: 100%;
+  padding: $g-3 $g-10;
+  // height: 5vh;
+  background-color: $c-gray-light;
+
+  color: $fc-light;
+
+  position: absolute;
+  // img {
+  // }
+
+  // nav {
+  // }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__MobileNav {
+    z-index: -1;
+
+    display: flex;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100%;
+    background-color: $c-gray-light;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    transition: all 0.5s;
+
+    &--closed {
+      opacity: 0;
+      pointer-events: none;
+      visibility: hidden;
+
+      transform: translateX(100%);
+    }
+
+    &--open {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+    }
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: $g-4;
+
+    margin: auto;
+  }
+}

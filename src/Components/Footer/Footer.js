@@ -26,12 +26,8 @@ export default function Footer(props) {
             <ul>
               {navigableSections.map((section) => {
                 return (
-                  <li>
-                    <Button
-                      key={section.id}
-                      href={`#${section.id}`}
-                      styled={false}
-                    >
+                  <li key={section.id}>
+                    <Button href={`#${section.id}`} styled={false}>
                       {section.getAttribute("navname")}
                     </Button>
                   </li>

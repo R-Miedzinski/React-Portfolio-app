@@ -6,7 +6,7 @@ export default function Button({ styled = true, ...props }) {
   const className = `${styled ? classes.btn : ""} ${props.className}`;
 
   return (
-    <a href={props.href} className={className}>
+    <a href={props.href} className={className} onClick={props.onClick}>
       {props.children}
     </a>
   );

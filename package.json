@@ -40,6 +40,7 @@
   "devDependencies": {
     "@ionic/react": "^7.0.10",
     "ionicons": "^7.1.2",
+    "media-queries-in-react": "^0.1.11",
     "react-ionicons": "^4.2.0"
   }
 }
