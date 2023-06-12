@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
 import classes from "./Nav.module.scss";
 import { logo } from "../../../Assets/imgs";
 import Button from "../../Layout/UI/Button";
+import LanguageContext from "../../../Store/language-context";
+import content from "../../../Assets/content.json";
 
 export default function Nav(props) {
   const [navigableSections, setNavigableSections] = useState([]);
+  const [availableLanguages, setAvailableLanguages] = useState([]);
+  const languageContext = useContext(LanguageContext);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -15,7 +19,13 @@ export default function Nav(props) {
         return section.id.includes("s-");
       })
     );
-  }, []);
+
+    setAvailableLanguages(Object.keys(content));
+  }, [languageContext.currentLanguage]);
+
+  const languageChangeHandler = (event) => {
+    languageContext.changeLanguage(event.target.value);
+  };
 
   return (
     <div className={classes["nav"]} style={props.style}>
@@ -33,6 +43,19 @@ export default function Nav(props) {
           })}
         </ul>
       </nav>
+      <select
+        name="language"
+        value={languageContext.currentLanguage}
+        onChange={languageChangeHandler}
+      >
+        {availableLanguages.map((language) => {
+          return (
+            <option key={language} value={language}>
+              {language}
+            </option>
+          );
+        })}
+      </select>
     </div>
   );
 }

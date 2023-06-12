@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import useMediaQueries from "media-queries-in-react";
 
 import classes from "./Header.module.scss";
 import Nav from "./Nav/Nav";
 import MobileNav from "./Nav/MobileNav";
+import LanguageContext from "../../Store/language-context";
 
 const delay = 500;
 
@@ -13,19 +14,21 @@ export default function Header(props) {
   });
 
   const [navMountedStyle, navUnmountedStyle] = [
-    { opacity: 1, transition: `all ${delay}ms` },
+    { opacity: 1, transition: `all ${delay}ms`, "--position": "sticky" },
     {
       opacity: 1,
       transform: "translateY(-100%)",
       transition: `all ${delay}ms`,
+      "--position": "absolute",
     },
   ];
   const [mobileNavMountedStyle, mobileNavUnmountedStyle] = [
-    { opacity: 1, transition: `all ${delay}ms` },
+    { opacity: 1, transition: `all ${delay}ms`, "--position": "sticky" },
     {
       opacity: 1,
       transform: "translateX(100%)",
       transition: `all ${delay}ms`,
+      "--position": "absolute",
     },
   ];
 
@@ -36,6 +39,9 @@ export default function Header(props) {
   const [currentMobileNavStyle, setCurrentMobileNavStyle] = useState(
     !mediaQueries.desktop ? mobileNavMountedStyle : null
   );
+  const languageContext = useContext(LanguageContext);
+
+  const content = languageContext.currentContent.header;
 
   useEffect(() => {
     let timeoutID1;
@@ -97,21 +103,14 @@ export default function Header(props) {
       {currentNavStyle && <Nav style={currentNavStyle} />}
       {currentMobileNavStyle && <MobileNav style={currentMobileNavStyle} />}
       <div className="container">
-        <section className={classes["s-header"]} id="s-header" navname="Header">
+        <section
+          className={classes["s-header"]}
+          id="s-header"
+          navname={content.navname}
+        >
           <header>
-            <h1>Hello! This is my page</h1>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
-              consequat eros magna, at maximus orci placerat non. Phasellus vel
-              tellus neque. Mauris vestibulum dui nec sem efficitur, sit amet
-              condimentum orci consequat. Praesent in nisi tempus, tempor lacus
-              et, pretium eros. Sed porta ipsum et orci lacinia pharetra. Sed
-              iaculis sodales posuere. Nunc consectetur neque arcu, quis gravida
-              ligula dapibus nec. Vestibulum rhoncus, felis sed porttitor
-              commodo, sapien nunc auctor justo, nec venenatis diam nibh a
-              tellus. Morbi sit amet laoreet mauris. Phasellus sit amet
-              fringilla elit.
-            </p>
+            <h1>{content.greeting}</h1>
+            <p>{content.description}</p>
           </header>
         </section>
       </div>

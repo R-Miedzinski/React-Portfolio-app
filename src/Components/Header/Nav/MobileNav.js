@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
 import classes from "./MobileNav.module.scss";
 import { logo } from "../../../Assets/imgs";
 import Button from "../../Layout/UI/Button";
+import LanguageContext from "../../../Store/language-context";
+import content from "../../../Assets/content.json";
 
 const preventDefault = (e) => {
   e = e || window.event;
@@ -24,7 +26,9 @@ const disableScroll = () => {
 
 export default function MobileNav(props) {
   const [navigableSections, setNavigableSections] = useState([]);
+  const [availableLanguages, setAvailableLanguages] = useState([]);
   const [toggle, setToggle] = useState(false);
+  const languageContext = useContext(LanguageContext);
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -34,7 +38,9 @@ export default function MobileNav(props) {
         return section.id.includes("s-");
       })
     );
-  }, []);
+
+    setAvailableLanguages(Object.keys(content));
+  }, [languageContext.currentLanguage]);
 
   const listToggleHandler = () => {
     setToggle((prevState) => {
@@ -58,6 +64,10 @@ export default function MobileNav(props) {
     }
   }, [toggle]);
 
+  const languageChangeHandler = (event) => {
+    languageContext.changeLanguage(event.target.value);
+  };
+
   return (
     <div className={classes["nav"]} style={props.style}>
       <div className={classes["nav__top"]}>
@@ -65,25 +75,40 @@ export default function MobileNav(props) {
         <Button onClick={listToggleHandler}>{toggle ? "X" : "="}</Button>
       </div>
 
-      <nav
+      <div
         className={
           toggle
             ? `${classes["nav__MobileNav"]} ${classes["nav__MobileNav--open"]}`
             : `${classes["nav__MobileNav"]} ${classes["nav__MobileNav--closed"]}`
         }
       >
-        <ul>
-          {navigableSections.map((section) => {
+        <nav>
+          <ul>
+            {navigableSections.map((section) => {
+              return (
+                <li key={section.id}>
+                  <Button href={`#${section.id}`} onClick={closeMenyHandler}>
+                    {section.getAttribute("navname")}
+                  </Button>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+        <select
+          name="language"
+          value={languageContext.currentLanguage}
+          onChange={languageChangeHandler}
+        >
+          {availableLanguages.map((language) => {
             return (
-              <li key={section.id}>
-                <Button href={`#${section.id}`} onClick={closeMenyHandler}>
-                  {section.getAttribute("navname")}
-                </Button>
-              </li>
+              <option key={language} value={language}>
+                {language}
+              </option>
             );
           })}
-        </ul>
-      </nav>
+        </select>
+      </div>
     </div>
   );
 }

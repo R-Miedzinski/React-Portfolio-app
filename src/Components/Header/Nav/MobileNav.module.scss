@@ -11,13 +11,14 @@
 
   color: $fc-light;
 
-  position: absolute;
+  margin-bottom: -$navOffset;
+  position: var(--position);
+  top: 0;
+  // left: 0;
   // img {
   // }
-
   // nav {
   // }
-
   &__top {
     display: flex;
     justify-content: space-between;
@@ -27,7 +28,9 @@
     z-index: -1;
 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 
     height: 100vh;
     width: 100%;
@@ -35,7 +38,7 @@
 
     position: absolute;
     left: 0;
-    top: 0;
+    top: 100%;
 
     transition: all 0.5s;
 

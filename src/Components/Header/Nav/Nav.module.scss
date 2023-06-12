@@ -11,17 +11,26 @@
 
   color: $fc-light;
 
-  position: absolute;
+  // position: absolute;
+  margin-bottom: -$navOffset;
+  position: var(--position);
+  top: 0;
 
   // img {
   // }
-
   // nav {
   // }
-
   ul {
     display: flex;
     justify-content: space-around;
     gap: $g-2;
+  }
+
+  select {
+    position: absolute;
+    top: 50%;
+    right: 0;
+
+    transform: translate(-$g-1, -50%);
   }
 }

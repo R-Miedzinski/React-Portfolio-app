@@ -4,100 +4,8 @@ import classes from "./Portfolio.module.scss";
 import { img1 } from "../../Assets/imgs";
 import ProjectCard from "./ProjectCard";
 import Carousel from "../Layout/UI/Carousel";
-
-const DUMMY_PROJECTS = [
-  {
-    id: "1",
-    title: "Test Project 1",
-    img: img1,
-    description:
-      "Some project I worked on, one of many, go and see others Some project I worked on, one of many, go and see others",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    category: "FrontEnd",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    id: "2",
-    title: "Test Project 2",
-    img: img1,
-    description: "Some project I worked on, one of many, go and see others",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    category: "FrontEnd",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    id: "3",
-    title: "Science 1",
-    img: img1,
-    description: "Some project I worked on, one of many, go and see others",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    category: "Science",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    id: "4",
-    title: "Test gameDev 2",
-    img: img1,
-    description: "Some project I worked on, one of many, go and see others",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    category: "GameDev",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    id: "5",
-    title: "Test Project 3",
-    img: img1,
-    description: "Some project I worked on, one of many, go and see others",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    category: "FrontEnd",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    id: "6",
-    title: "Test gameDev 1",
-    img: img1,
-    description: "Some project I worked on, one of many, go and see others",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    category: "GameDev",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    id: "7",
-    title: "Science 2",
-    img: img1,
-    description: "Some project I worked on, one of many, go and see others",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    category: "Science",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    id: "8",
-    title: "Test gameDev 3",
-    img: img1,
-    description: "Some project I worked on, one of many, go and see others",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    category: "GameDev",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    id: "9",
-    title: "Test Project 4",
-    img: img1,
-    description: "Some project I worked on, one of many, go and see others",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    category: "FrontEnd",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-  {
-    id: "10",
-    title: "Test gameDev 4",
-    img: img1,
-    description: "Some project I worked on, one of many, go and see others",
-    techStack: ["HTML", "CSS", "JavaScript"],
-    category: "GameDev",
-    url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-  },
-];
+import { useContext } from "react";
+import LanguageContext from "../../Store/language-context";
 
 function onlyUnique(value, index, array) {
   return array.indexOf(value) === index;
@@ -119,18 +27,10 @@ const selected = (listToFilter, filters) => {
 
   return filteredList;
 };
-const categoryList = DUMMY_PROJECTS.map((item) => item.category).filter(
-  onlyUnique
-);
-
-const initialCarouselState = {
-  projects: selected(DUMMY_PROJECTS, categoryList),
-  carousel: [],
-};
 
 const carouselReducer = (state, action) => {
   if (action.type === "SET_PROJECTS") {
-    const filteredList = selected(DUMMY_PROJECTS, action.filters);
+    const filteredList = selected(state.allProjects, action.filters);
 
     return {
       ...state,
@@ -166,19 +66,40 @@ const carouselReducer = (state, action) => {
     };
   }
 
-  return initialCarouselState;
+  if (action.type === "NEW_LANGUAGE") {
+    return {
+      ...state,
+      allProjects: action.projects,
+    };
+  }
+
+  return {
+    ...state,
+    projects: selected(
+      state.allProjects,
+      state.allProjects.map((item) => item.category).filter(onlyUnique)
+    ),
+    carousel: [],
+  };
 };
 
 const range = 4;
 
 export default function Portfolio(props) {
-  const [filtersList, setFiltersList] = useState(categoryList);
-  // const [projects, setProjects] = useState(selected(DUMMY_PROJECTS, filtersList));
-  // const [carousel, setCarousel] = useState([]);
-  const [carouselState, carouselDispatch] = useReducer(
-    carouselReducer,
-    initialCarouselState
+  const languageContext = useContext(LanguageContext);
+  const content = languageContext.currentContent.portfolio;
+
+  const [projects, setProjects] = useState(content.projects);
+  const [categoryList, setCategoryList] = useState(
+    projects.map((item) => item.category).filter(onlyUnique)
   );
+
+  const [filtersList, setFiltersList] = useState(categoryList);
+  const [carouselState, carouselDispatch] = useReducer(carouselReducer, {
+    projects: selected(projects, categoryList),
+    carousel: [],
+    allProjects: projects,
+  });
 
   const categoryChangeHandler = (event) => {
     const category = event.target.textContent;
@@ -191,6 +112,14 @@ export default function Portfolio(props) {
   };
 
   useEffect(() => {
+    setProjects(content.projects);
+    setCategoryList(
+      content.projects.map((item) => item.category).filter(onlyUnique)
+    );
+    carouselDispatch({ type: "NEW_LANGUAGE", projects: content.projects });
+  }, [languageContext.currentLanguage]);
+
+  useEffect(() => {
     carouselDispatch({ type: "SET_PROJECTS", filters: filtersList });
 
     carouselDispatch({
@@ -201,7 +130,7 @@ export default function Portfolio(props) {
       range,
       wrap: false,
     });
-  }, [filtersList]);
+  }, [languageContext.currentLanguage, filtersList]);
 
   const calcTransition = (position) => {
     // return `${50 + position * 100}%`;
@@ -233,9 +162,10 @@ export default function Portfolio(props) {
       <section
         className={classes["s-portfolio"]}
         id="s-portfolio"
-        navname="Portfolio"
+        navname={content.navname}
         style={{ "--range": range }}
       >
+        <h2>{content.header}</h2>
         {categoryList.map((category) => {
           return (
             <button onClick={categoryChangeHandler} key={category}>

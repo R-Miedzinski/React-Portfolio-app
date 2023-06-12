@@ -1,12 +1,16 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 
 import classes from "./Footer.module.scss";
 import { IonIcon } from "@ionic/react";
 import { logoGithub, logoLinkedin } from "ionicons/icons";
 import Button from "../Layout/UI/Button";
+import LanguageContext from "../../Store/language-context";
 
 export default function Footer(props) {
   const [navigableSections, setNavigableSections] = useState([]);
+  const languageContext = useContext(LanguageContext);
+
+  const content = languageContext.currentContent.footer;
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -16,7 +20,7 @@ export default function Footer(props) {
         return section.id.includes("s-");
       })
     );
-  }, []);
+  }, [languageContext.currentLanguage]);
 
   return (
     <>
@@ -43,7 +47,7 @@ export default function Footer(props) {
                   className={classes["s-footer__link"]}
                   styled={false}
                 >
-                  Email
+                  {content.email}
                 </Button>
               </li>
               <li>
@@ -52,7 +56,7 @@ export default function Footer(props) {
                   className={classes["s-footer__link"]}
                   styled={false}
                 >
-                  Phone
+                  {content.phone}
                 </Button>
               </li>
             </ul>

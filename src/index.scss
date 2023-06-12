@@ -1,11 +1,12 @@
 @import "Sass/Variables";
 
 ::-webkit-scrollbar {
-  width: $g-1;
+  width: 0.5 * $g-1;
   height: 200vh;
 }
 
 ::-webkit-scrollbar-track {
+  border: 1px solid $c-gray;
   background-color: $c-bg-light;
 }
 
@@ -21,6 +22,7 @@ html {
   overflow-y: auto;
 
   background-color: $c-bg-light;
+  scroll-behavior: smooth;
 }
 
 html[overflow="hidden"] {
@@ -39,6 +41,12 @@ body {
   font-size: $fs-default;
   color: $fc-default;
   line-height: $lh-default;
+}
+
+section,
+footer {
+  padding-top: $navOffset;
+  margin-bottom: -$navOffset;
 }
 
 code {

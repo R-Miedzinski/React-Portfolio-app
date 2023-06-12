@@ -1,0 +1,392 @@
+{
+  "en-GB": {
+    "header": {
+      "navname": "Header",
+      "greeting": "Hello! I am Radosław and I greet you on my page",
+      "description": "There goes an introduction of myself"
+    },
+    "about": {
+      "navname": "About Me",
+      "header": "About Me",
+      "description": "A paragraph telling something about me, some information and stuff"
+    },
+    "experience": {
+      "header": "Experience and Education",
+      "navname": "Experience",
+      "positionsList": [
+        {
+          "title": "First Job",
+          "time": { "start": "2020-05-20", "end": "2021/09/05" },
+          "description": "Description of my firs job"
+        }
+      ],
+      "educationList": [
+        {
+          "title": "University",
+          "time": { "start": "2020-05-20", "end": "" },
+          "description": "education position description"
+        }
+      ],
+      "techStack": [
+        {
+          "tech": "JavaScript",
+          "level": "Intermediate",
+          "category": "Web Development",
+          "order": 2
+        },
+        {
+          "tech": "React",
+          "level": "Intermediate",
+          "category": "Web Development",
+          "order": 1
+        },
+        {
+          "tech": "HTML",
+          "level": "Intermediate",
+          "category": "Web Development",
+          "order": 3
+        },
+        {
+          "tech": "CSS",
+          "level": "Intermediate",
+          "category": "Web Development",
+          "order": 3
+        },
+        {
+          "tech": "SASS",
+          "level": "Intermediate",
+          "category": "Web Development",
+          "order": 2
+        },
+        {
+          "tech": "R",
+          "level": "Intermediate",
+          "category": "Various",
+          "order": 2
+        },
+        {
+          "tech": "Bash",
+          "level": "Intermediate",
+          "category": "Various",
+          "order": 1
+        },
+        {
+          "tech": "Python",
+          "level": "Intermediate",
+          "category": "Various",
+          "order": 1
+        },
+        {
+          "tech": "Fortran",
+          "level": "Intermidiate",
+          "category": "Various",
+          "order": 2
+        },
+        {
+          "tech": "C++",
+          "level": "Intermediate",
+          "category": "GameDev",
+          "order": 2
+        }
+      ]
+    },
+    "portfolio": {
+      "header": "My projects",
+      "navname": "Portfolio",
+      "projects": [
+        {
+          "id": "1",
+          "title": "Test Project 1",
+          "img": "img1",
+          "description": "Some project I worked on, one of many, go and see others Some project I worked on, one of many, go and see others",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "FrontEnd",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "2",
+          "title": "Test Project 2",
+          "img": "img1",
+          "description": "Some project I worked on, one of many, go and see others",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "FrontEnd",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "3",
+          "title": "Science 1",
+          "img": "img1",
+          "description": "Some project I worked on, one of many, go and see others",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "Science",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "4",
+          "title": "Test gameDev 2",
+          "img": "img1",
+          "description": "Some project I worked on, one of many, go and see others",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "GameDev",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "5",
+          "title": "Test Project 3",
+          "img": "img1",
+          "description": "Some project I worked on, one of many, go and see others",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "FrontEnd",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "6",
+          "title": "Test gameDev 1",
+          "img": "img1",
+          "description": "Some project I worked on, one of many, go and see others",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "GameDev",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "7",
+          "title": "Science 2",
+          "img": "img1",
+          "description": "Some project I worked on, one of many, go and see others",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "Science",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "8",
+          "title": "Test gameDev 3",
+          "img": "img1",
+          "description": "Some project I worked on, one of many, go and see others",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "GameDev",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "9",
+          "title": "Test Project 4",
+          "img": "img1",
+          "description": "Some project I worked on, one of many, go and see others",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "FrontEnd",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "10",
+          "title": "Test gameDev 4",
+          "img": "img1",
+          "description": "Some project I worked on, one of many, go and see others",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "GameDev",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+      ]
+    },
+    "footer": {
+      "email": "Email",
+      "phone": "Phone"
+    },
+    "misc": {
+      "current": "current"
+    }
+  },
+  "pl": {
+    "header": {
+      "navname": "Nagłówek",
+      "greeting": "Jestem Radosław i witam Cię na mojej stronie",
+      "description": "Opis mnie"
+    },
+    "about": {
+      "navname": "O mnie",
+      "header": "O mnie",
+      "description": "Paragraf opisujący mnie, podstawowe informacje, ambicje i wgl"
+    },
+    "portfolio": {
+      "header": "Moje projekty",
+      "navname": "Portfolio",
+      "projects": [
+        {
+          "id": "1",
+          "title": "Testowy projekt 1",
+          "img": "img1",
+          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "FrontEnd",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "2",
+          "title": "Testowy projekt 2",
+          "img": "img1",
+          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "FrontEnd",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "3",
+          "title": "Nauka 1",
+          "img": "img1",
+          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "Science",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "4",
+          "title": "Test gameDev 2",
+          "img": "img1",
+          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "GameDev",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "5",
+          "title": "Testowy projekt 3",
+          "img": "img1",
+          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "FrontEnd",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "6",
+          "title": "Test gameDev 1",
+          "img": "img1",
+          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "GameDev",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "7",
+          "title": "Nauka 2",
+          "img": "img1",
+          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "Science",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "8",
+          "title": "Test gameDev 3",
+          "img": "img1",
+          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "GameDev",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "9",
+          "title": "Testowy projekt 4",
+          "img": "img1",
+          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "FrontEnd",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        },
+        {
+          "id": "10",
+          "title": "Test gameDev 4",
+          "img": "img1",
+          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
+          "techStack": ["HTML", "CSS", "JavaScript"],
+          "category": "GameDev",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        }
+      ]
+    },
+    "experience": {
+      "header": "Doświadczenie i Edukacje",
+      "navname": "Doświadczenie",
+      "positionsList": [
+        {
+          "title": "Pierwsza praca",
+          "time": { "start": "2020-05-20", "end": "2021/09/05" },
+          "description": "Opis pierwszej pracy"
+        }
+      ],
+      "educationList": [
+        {
+          "title": "Uniwersytet",
+          "time": { "start": "2020-05-20", "end": "" },
+          "description": "Opis kierunku edukacji"
+        }
+      ],
+      "techStack": [
+        {
+          "tech": "JavaScript",
+          "level": "Średniozaawansowany",
+          "category": "Web Development",
+          "order": 2
+        },
+        {
+          "tech": "React",
+          "level": "Średniozaawansowany",
+          "category": "Web Development",
+          "order": 1
+        },
+        {
+          "tech": "HTML",
+          "level": "Średniozaawansowany",
+          "category": "Web Development",
+          "order": 3
+        },
+        {
+          "tech": "CSS",
+          "level": "Średniozaawansowany",
+          "category": "Web Development",
+          "order": 3
+        },
+        {
+          "tech": "SASS",
+          "level": "Średniozaawansowany",
+          "category": "Web Development",
+          "order": 2
+        },
+        {
+          "tech": "R",
+          "level": "Średniozaawansowany",
+          "category": "Różne",
+          "order": 2
+        },
+        {
+          "tech": "Bash",
+          "level": "Średniozaawansowany",
+          "category": "Różne",
+          "order": 1
+        },
+        {
+          "tech": "Python",
+          "level": "Średniozaawansowany",
+          "category": "Różne",
+          "order": 1
+        },
+        {
+          "tech": "Fortran",
+          "level": "Średniozaawansowany",
+          "category": "Różne",
+          "order": 2
+        },
+        {
+          "tech": "C++",
+          "level": "Średniozaawansowany",
+          "category": "GameDev",
+          "order": 2
+        }
+      ]
+    },
+    "footer": {
+      "email": "Email",
+      "phone": "Telefon"
+    },
+    "misc": {
+      "current": "obecnie"
+    }
+  }
+}
