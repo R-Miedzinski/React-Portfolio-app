@@ -1,0 +1,261 @@
+{
+  "en-GB": {
+    "header": {
+      "navname": "Header",
+      "greeting": "Hi, I am Radek!",
+      "description": "Theoretical Physicist turned web developer. Always eager to solve complex problems, bringing unique personal perspective."
+    },
+    "about": {
+      "navname": "About Me",
+      "header": "About Me",
+      "description": "A paragraph telling something about me, some information and stuff"
+    },
+    "experience": {
+      "header": "Experience and Education",
+      "navname": "Experience",
+      "positionsList": [
+        {
+          "title": "Freelancing",
+          "time": { "start": "2022-09", "end": "" },
+          "description": "Developed responsive web pages both as commisions and for personal use. I have mostly been working with React, HTML5 and SASS/CSS3. Check projects below!"
+        }
+      ],
+      "educationList": [
+        {
+          "title": "Bachelor of Science at University of Wrocław",
+          "time": { "start": "2020-10", "end": "" },
+          "description": "I studied Theoretical Physics. For my bachelor thesis I worked on Computational Simulations of White Dwarf Novea, using Fortran, Python, R and Bash scripting along the way."
+        }
+      ],
+      "techStack": [
+        {
+          "tech": "JavaScript",
+          "level": "Intermediate",
+          "category": "Web Development",
+          "order": 2
+        },
+        {
+          "tech": "React",
+          "level": "Intermediate",
+          "category": "Web Development",
+          "order": 1
+        },
+        {
+          "tech": "HTML",
+          "level": "Intermediate",
+          "category": "Web Development",
+          "order": 3
+        },
+        {
+          "tech": "CSS",
+          "level": "Intermediate",
+          "category": "Web Development",
+          "order": 3
+        },
+        {
+          "tech": "SASS",
+          "level": "Intermediate",
+          "category": "Web Development",
+          "order": 2
+        },
+        {
+          "tech": "R",
+          "level": "Intermediate",
+          "category": "Various",
+          "order": 2
+        },
+        {
+          "tech": "Bash",
+          "level": "Intermediate",
+          "category": "Various",
+          "order": 1
+        },
+        {
+          "tech": "Python",
+          "level": "Intermediate",
+          "category": "Various",
+          "order": 1
+        },
+        {
+          "tech": "Fortran",
+          "level": "Intermidiate",
+          "category": "Various",
+          "order": 2
+        },
+        {
+          "tech": "C++",
+          "level": "Intermediate",
+          "category": "GameDev",
+          "order": 2
+        },
+        {
+          "tech": "Mathematica",
+          "level": "Intermediate",
+          "category": "Various",
+          "order": 3
+        }
+      ]
+    },
+    "portfolio": {
+      "header": "My projects",
+      "navname": "Portfolio",
+      "projects": [
+        {
+          "id": "1",
+          "title": "Personal Page React app",
+          "img": "img1",
+          "description": "This page. Created as a React app.",
+          "techStack": ["React", "JavaScript", "HTML", "SASS", "CSS"],
+          "category": "FrontEnd",
+          "url": "https://github.com/R-Miedzinski/React-Portfolio-app"
+        },
+        {
+          "id": "2",
+          "title": "Asteroid Game",
+          "img": "img1",
+          "description": "Asteroid-like game in SFML",
+          "techStack": ["C++"],
+          "category": "GameDev",
+          "url": "https://github.com/R-Miedzinski/Asteroids"
+        }
+      ]
+    },
+    "footer": {
+      "email": "Email",
+      "phone": "Phone"
+    },
+    "misc": {
+      "current": "current"
+    }
+  },
+  "pl": {
+    "header": {
+      "navname": "Nagłówek",
+      "greeting": "Hej, jestem Radek.",
+      "description": "Z wykształcenia Fizyk Teoretyk, obecnie zajmuję się tworzeniem stron internetowych i aplikacji webowych. Nie straszne mi żadne napotakne złożone problemy, do których zawsze wnoszę unikalną perspektywę."
+    },
+    "about": {
+      "navname": "O mnie",
+      "header": "O mnie",
+      "description": "Paragraf opisujący mnie, podstawowe informacje, ambicje i wgl"
+    },
+    "experience": {
+      "header": "Doświadczenie i Edukacje",
+      "navname": "Doświadczenie",
+      "positionsList": [
+        {
+          "title": "Freelancing",
+          "time": { "start": "2022-09", "end": "" },
+          "description": "Stworzyłem responsywne strony internetowe zarówno na zlecenie jak i do użytku własnego. Korzystałem głównie z biblioteki React, oraz HTML5, CSS i preprocesora SASS. Moje przykładowe projekty znajdują się niżej."
+        }
+      ],
+      "educationList": [
+        {
+          "title": "Licencjat z Fizyki na Uniwersytecie Wrocławskim",
+          "time": { "start": "2020-10", "end": "" },
+          "description": "Studiowałem Fizykę ze specjalnością Fizyka Teoretyczna. W ramach pracy dyplomowej zajmowałem się Symulacjami Supernowych w Układach z Białymi Karłami, korzystając z Fortrana, Pythona, R-a i skryptów w Bashu."
+        }
+      ],
+      "techStack": [
+        {
+          "tech": "JavaScript",
+          "level": "Średniozaawansowany",
+          "category": "Web Development",
+          "order": 2
+        },
+        {
+          "tech": "React",
+          "level": "Średniozaawansowany",
+          "category": "Web Development",
+          "order": 1
+        },
+        {
+          "tech": "HTML",
+          "level": "Średniozaawansowany",
+          "category": "Web Development",
+          "order": 3
+        },
+        {
+          "tech": "CSS",
+          "level": "Średniozaawansowany",
+          "category": "Web Development",
+          "order": 3
+        },
+        {
+          "tech": "SASS",
+          "level": "Średniozaawansowany",
+          "category": "Web Development",
+          "order": 2
+        },
+        {
+          "tech": "R",
+          "level": "Średniozaawansowany",
+          "category": "Różne",
+          "order": 2
+        },
+        {
+          "tech": "Bash",
+          "level": "Średniozaawansowany",
+          "category": "Różne",
+          "order": 1
+        },
+        {
+          "tech": "Python",
+          "level": "Średniozaawansowany",
+          "category": "Różne",
+          "order": 1
+        },
+        {
+          "tech": "Fortran",
+          "level": "Średniozaawansowany",
+          "category": "Różne",
+          "order": 2
+        },
+        {
+          "tech": "C++",
+          "level": "Średniozaawansowany",
+          "category": "GameDev",
+          "order": 2
+        },
+        {
+          "tech": "Mathematica",
+          "level": "Średniozaawansowany",
+          "category": "Różne",
+          "order": 3
+        }
+      ]
+    },
+    "portfolio": {
+      "header": "Moje projekty",
+      "navname": "Portfolio",
+      "projects": [
+        {
+          "id": "1",
+          "title": "Strona personalna",
+          "img": "img1",
+          "description": "Ta strona. Aplikacja napisana w React",
+          "techStack": ["React", "JavaScript", "HTML", "SASS", "CSS"],
+          "category": "FrontEnd",
+          "url": "https://github.com/R-Miedzinski/React-Portfolio-app"
+        },
+        {
+          "id": "2",
+          "title": "Asteroidy",
+          "img": "img1",
+          "description": "Gra przypominająca klasyczne Asteroidy napisana w SFML-u",
+          "techStack": ["C++"],
+          "category": "GameDev",
+          "url": "https://github.com/R-Miedzinski/Asteroids"
+        }
+      ]
+    },
+
+    "footer": {
+      "email": "Email",
+      "phone": "Telefon"
+    },
+    "misc": {
+      "current": "obecnie"
+    }
+  }
+}

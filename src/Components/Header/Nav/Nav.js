@@ -1,36 +1,42 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 
 import classes from "./Nav.module.scss";
 import { logo } from "../../../Assets/imgs";
-import NavButton from "./NavButton";
+import Button from "../../Layout/UI/Button";
+import LanguageContext from "../../../Store/language-context";
+import content from "../../../Assets/content.json";
+import NavButtonList from "../../Layout/UI/NavButtonList";
 
 export default function Nav(props) {
-  const [navigableSections, setNavigableSections] = useState([]);
+  const [availableLanguages, setAvailableLanguages] = useState([]);
+  const languageContext = useContext(LanguageContext);
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
+    setAvailableLanguages(Object.keys(content));
+  }, [languageContext.currentLanguage]);
 
-    setNavigableSections(
-      Array.from(sections).filter((section) => {
-        return section.id.includes("s-");
-      })
-    );
-  }, []);
+  const languageChangeHandler = (event) => {
+    languageContext.changeLanguage(event.target.value);
+  };
 
   return (
-    <div className={classes["nav"]}>
+    <div className={classes["nav"]} style={props.style}>
       <img src={logo} alt="Img in header, logo" />
-      <nav>
-        <ul>
-          {navigableSections.map((section) => {
-            return (
-              <NavButton key={section.id} href={`#${section.id}`}>
-                {section.getAttribute("navname")}
-              </NavButton>
-            );
-          })}
-        </ul>
-      </nav>
+
+      <nav>{<NavButtonList />}</nav>
+      <select
+        name="language"
+        value={languageContext.currentLanguage}
+        onChange={languageChangeHandler}
+      >
+        {availableLanguages.map((language) => {
+          return (
+            <option key={language} value={language}>
+              {language}
+            </option>
+          );
+        })}
+      </select>
     </div>
   );
 }

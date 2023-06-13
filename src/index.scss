@@ -1,10 +1,32 @@
 @import "Sass/Variables";
 
+::-webkit-scrollbar {
+  width: 0.5 * $g-1;
+  height: 200vh;
+}
+
+::-webkit-scrollbar-track {
+  border: 1px solid $c-gray;
+  background-color: $c-bg-light;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $c-gray;
+  border-radius: $bg-r-inf;
+}
+
 html {
   font-size: 62.5%;
+
   overflow-x: hidden;
+  overflow-y: auto;
 
   background-color: $c-bg-light;
+  scroll-behavior: smooth;
+}
+
+html[overflow="hidden"] {
+  overflow: hidden;
 }
 
 body {
@@ -19,6 +41,12 @@ body {
   font-size: $fs-default;
   color: $fc-default;
   line-height: $lh-default;
+}
+
+section,
+footer {
+  // margin-top: $navOffset;
+  // margin-bottom: -$navOffset;
 }
 
 code {
@@ -43,6 +71,14 @@ a:link,
 a:visited {
   text-decoration: none;
   color: $fc-default;
+}
+
+h2 {
+  font-size: $fs-Big;
+}
+
+#root {
+  position: relative;
 }
 
 .container {

@@ -1,4 +1,3 @@
-import { getNextKeyDef } from "@testing-library/user-event/dist/keyboard/getNextKeyDef";
 import React, { useCallback, useEffect, useState } from "react";
 
 const preventDefault = (e) => {

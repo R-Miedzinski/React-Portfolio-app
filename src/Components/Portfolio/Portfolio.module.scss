@@ -1,6 +1,8 @@
 @import "../../Sass/Variables";
 
 .s-portfolio {
+  background-color: $c-bg;
+
   &__carousel {
     width: 80%;
     height: 40rem;
