@@ -2,8 +2,8 @@
   "en-GB": {
     "header": {
       "navname": "Header",
-      "greeting": "Hello! I am Radosław and I greet you on my page",
-      "description": "There goes an introduction of myself"
+      "greeting": "Hi, I am Radek!",
+      "description": "Theoretical Physicist turned web developer. Always eager to solve complex problems, bringing unique personal perspective."
     },
     "about": {
       "navname": "About Me",
@@ -15,16 +15,16 @@
       "navname": "Experience",
       "positionsList": [
         {
-          "title": "First Job",
-          "time": { "start": "2020-05-20", "end": "2021/09/05" },
-          "description": "Description of my firs job"
+          "title": "Freelancing",
+          "time": { "start": "2022-09", "end": "" },
+          "description": "Developed responsive web pages both as commisions and for personal use. I have mostly been working with React, HTML5 and SASS/CSS3. Check projects below!"
         }
       ],
       "educationList": [
         {
-          "title": "University",
-          "time": { "start": "2020-05-20", "end": "" },
-          "description": "education position description"
+          "title": "Bachelor of Science at University of Wrocław",
+          "time": { "start": "2020-10", "end": "" },
+          "description": "I studied Theoretical Physics. For my bachelor thesis I worked on Computational Simulations of White Dwarf Novea, using Fortran, Python, R and Bash scripting along the way."
         }
       ],
       "techStack": [
@@ -87,6 +87,12 @@
           "level": "Intermediate",
           "category": "GameDev",
           "order": 2
+        },
+        {
+          "tech": "Mathematica",
+          "level": "Intermediate",
+          "category": "Various",
+          "order": 3
         }
       ]
     },
@@ -96,93 +102,21 @@
       "projects": [
         {
           "id": "1",
-          "title": "Test Project 1",
+          "title": "Personal Page React app",
           "img": "img1",
-          "description": "Some project I worked on, one of many, go and see others Some project I worked on, one of many, go and see others",
-          "techStack": ["HTML", "CSS", "JavaScript"],
+          "description": "This page. Created as a React app.",
+          "techStack": ["React", "JavaScript", "HTML", "SASS", "CSS"],
           "category": "FrontEnd",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          "url": "https://github.com/R-Miedzinski/React-Portfolio-app"
         },
         {
           "id": "2",
-          "title": "Test Project 2",
+          "title": "Asteroid Game",
           "img": "img1",
-          "description": "Some project I worked on, one of many, go and see others",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "FrontEnd",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "3",
-          "title": "Science 1",
-          "img": "img1",
-          "description": "Some project I worked on, one of many, go and see others",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "Science",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "4",
-          "title": "Test gameDev 2",
-          "img": "img1",
-          "description": "Some project I worked on, one of many, go and see others",
-          "techStack": ["HTML", "CSS", "JavaScript"],
+          "description": "Asteroid-like game in SFML",
+          "techStack": ["C++"],
           "category": "GameDev",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "5",
-          "title": "Test Project 3",
-          "img": "img1",
-          "description": "Some project I worked on, one of many, go and see others",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "FrontEnd",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "6",
-          "title": "Test gameDev 1",
-          "img": "img1",
-          "description": "Some project I worked on, one of many, go and see others",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "GameDev",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "7",
-          "title": "Science 2",
-          "img": "img1",
-          "description": "Some project I worked on, one of many, go and see others",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "Science",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "8",
-          "title": "Test gameDev 3",
-          "img": "img1",
-          "description": "Some project I worked on, one of many, go and see others",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "GameDev",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "9",
-          "title": "Test Project 4",
-          "img": "img1",
-          "description": "Some project I worked on, one of many, go and see others",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "FrontEnd",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "10",
-          "title": "Test gameDev 4",
-          "img": "img1",
-          "description": "Some project I worked on, one of many, go and see others",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "GameDev",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+          "url": "https://github.com/R-Miedzinski/Asteroids"
         }
       ]
     },
@@ -197,125 +131,29 @@
   "pl": {
     "header": {
       "navname": "Nagłówek",
-      "greeting": "Jestem Radosław i witam Cię na mojej stronie",
-      "description": "Opis mnie"
+      "greeting": "Hej, jestem Radek.",
+      "description": "Z wykształcenia Fizyk Teoretyk, obecnie zajmuję się tworzeniem stron internetowych i aplikacji webowych. Nie straszne mi żadne napotakne złożone problemy, do których zawsze wnoszę unikalną perspektywę."
     },
     "about": {
       "navname": "O mnie",
       "header": "O mnie",
       "description": "Paragraf opisujący mnie, podstawowe informacje, ambicje i wgl"
     },
-    "portfolio": {
-      "header": "Moje projekty",
-      "navname": "Portfolio",
-      "projects": [
-        {
-          "id": "1",
-          "title": "Testowy projekt 1",
-          "img": "img1",
-          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "FrontEnd",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "2",
-          "title": "Testowy projekt 2",
-          "img": "img1",
-          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "FrontEnd",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "3",
-          "title": "Nauka 1",
-          "img": "img1",
-          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "Science",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "4",
-          "title": "Test gameDev 2",
-          "img": "img1",
-          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "GameDev",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "5",
-          "title": "Testowy projekt 3",
-          "img": "img1",
-          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "FrontEnd",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "6",
-          "title": "Test gameDev 1",
-          "img": "img1",
-          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "GameDev",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "7",
-          "title": "Nauka 2",
-          "img": "img1",
-          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "Science",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "8",
-          "title": "Test gameDev 3",
-          "img": "img1",
-          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "GameDev",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "9",
-          "title": "Testowy projekt 4",
-          "img": "img1",
-          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "FrontEnd",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        },
-        {
-          "id": "10",
-          "title": "Test gameDev 4",
-          "img": "img1",
-          "description": "Jakiś testowy projekt z pewnym opisem, dobrze żeby nie był za krótki",
-          "techStack": ["HTML", "CSS", "JavaScript"],
-          "category": "GameDev",
-          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-        }
-      ]
-    },
     "experience": {
       "header": "Doświadczenie i Edukacje",
       "navname": "Doświadczenie",
       "positionsList": [
         {
-          "title": "Pierwsza praca",
-          "time": { "start": "2020-05-20", "end": "2021/09/05" },
-          "description": "Opis pierwszej pracy"
+          "title": "Freelancing",
+          "time": { "start": "2022-09", "end": "" },
+          "description": "Stworzyłem responsywne strony internetowe zarówno na zlecenie jak i do użytku własnego. Korzystałem głównie z biblioteki React, oraz HTML5, CSS i preprocesora SASS. Moje przykładowe projekty znajdują się niżej."
         }
       ],
       "educationList": [
         {
-          "title": "Uniwersytet",
-          "time": { "start": "2020-05-20", "end": "" },
-          "description": "Opis kierunku edukacji"
+          "title": "Licencjat z Fizyki na Uniwersytecie Wrocławskim",
+          "time": { "start": "2020-10", "end": "" },
+          "description": "Studiowałem Fizykę ze specjalnością Fizyka Teoretyczna. W ramach pracy dyplomowej zajmowałem się Symulacjami Supernowych w Układach z Białymi Karłami, korzystając z Fortrana, Pythona, R-a i skryptów w Bashu."
         }
       ],
       "techStack": [
@@ -378,9 +216,40 @@
           "level": "Średniozaawansowany",
           "category": "GameDev",
           "order": 2
+        },
+        {
+          "tech": "Mathematica",
+          "level": "Średniozaawansowany",
+          "category": "Różne",
+          "order": 3
         }
       ]
     },
+    "portfolio": {
+      "header": "Moje projekty",
+      "navname": "Portfolio",
+      "projects": [
+        {
+          "id": "1",
+          "title": "Strona personalna",
+          "img": "img1",
+          "description": "Ta strona. Aplikacja napisana w React",
+          "techStack": ["React", "JavaScript", "HTML", "SASS", "CSS"],
+          "category": "FrontEnd",
+          "url": "https://github.com/R-Miedzinski/React-Portfolio-app"
+        },
+        {
+          "id": "2",
+          "title": "Asteroidy",
+          "img": "img1",
+          "description": "Gra przypominająca klasyczne Asteroidy napisana w SFML-u",
+          "techStack": ["C++"],
+          "category": "GameDev",
+          "url": "https://github.com/R-Miedzinski/Asteroids"
+        }
+      ]
+    },
+
     "footer": {
       "email": "Email",
       "phone": "Telefon"

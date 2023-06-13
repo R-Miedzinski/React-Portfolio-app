@@ -5,6 +5,7 @@ import { logo } from "../../../Assets/imgs";
 import Button from "../../Layout/UI/Button";
 import LanguageContext from "../../../Store/language-context";
 import content from "../../../Assets/content.json";
+import NavButtonList from "../../Layout/UI/NavButtonList";
 
 const preventDefault = (e) => {
   e = e || window.event;
@@ -25,20 +26,11 @@ const disableScroll = () => {
 };
 
 export default function MobileNav(props) {
-  const [navigableSections, setNavigableSections] = useState([]);
   const [availableLanguages, setAvailableLanguages] = useState([]);
   const [toggle, setToggle] = useState(false);
   const languageContext = useContext(LanguageContext);
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section");
-
-    setNavigableSections(
-      Array.from(sections).filter((section) => {
-        return section.id.includes("s-");
-      })
-    );
-
     setAvailableLanguages(Object.keys(content));
   }, [languageContext.currentLanguage]);
 
@@ -48,7 +40,7 @@ export default function MobileNav(props) {
     });
   };
 
-  const closeMenyHandler = () => {
+  const closeMenuHandler = () => {
     setToggle(false);
   };
 
@@ -82,19 +74,7 @@ export default function MobileNav(props) {
             : `${classes["nav__MobileNav"]} ${classes["nav__MobileNav--closed"]}`
         }
       >
-        <nav>
-          <ul>
-            {navigableSections.map((section) => {
-              return (
-                <li key={section.id}>
-                  <Button href={`#${section.id}`} onClick={closeMenyHandler}>
-                    {section.getAttribute("navname")}
-                  </Button>
-                </li>
-              );
-            })}
-          </ul>
-        </nav>
+        <nav>{<NavButtonList onClick={closeMenuHandler} />}</nav>
         <select
           name="language"
           value={languageContext.currentLanguage}

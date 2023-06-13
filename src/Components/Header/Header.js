@@ -96,6 +96,8 @@ export default function Header(props) {
 
   // console.log(mediaQueries.mobile);
 
+  const lastWordIndex = content.greeting.lastIndexOf(" ");
+
   return (
     <>
       {/* {desktopNav} */}
@@ -109,7 +111,16 @@ export default function Header(props) {
           navname={content.navname}
         >
           <header>
-            <h1>{content.greeting}</h1>
+            <h1>
+              {content.greeting.substring(0, lastWordIndex + 1)}
+              <span>
+                {content.greeting.substring(
+                  lastWordIndex + 1,
+                  content.greeting.length - 1
+                )}
+              </span>
+              {content.greeting[content.greeting.length - 1]}
+            </h1>
             <p>{content.description}</p>
           </header>
         </section>

@@ -1,6 +1,8 @@
 @import "../../../Sass/Variables";
 
 .nav {
+  z-index: 1000;
+
   display: flex;
   justify-content: space-between;
 

@@ -1,38 +1,68 @@
 @import "../../Sass/Variables";
 
 .s-experience {
+  display: flex;
+  flex-direction: column;
+  gap: $g-6;
+
   &__lists {
     display: flex;
     justify-content: space-between;
-    gap: $g-3;
+    gap: $g-10;
+
+    padding: 0 $g-10;
 
     & > * {
       flex-basis: 50%;
-      // padding: $g-1;
-      width: 90%;
     }
   }
 
   &__experienceList {
     display: flex;
     flex-direction: column;
-    gap: $g-3;
+    gap: $g-4;
+
+    color: $c-gray-light;
 
     li {
+      display: flex;
+      flex-direction: column;
+      gap: $g-2;
+      padding: $g-4 2 * $g-3;
+      background-color: $c-bg;
+      border-radius: $bg-r-big;
+
       h3 {
+        border-bottom: 1px solid $c-main;
+        font-size: $fs-medium;
       }
 
       div {
         display: flex;
         // justify-content: space-between;
-        gap: $g-2;
+        gap: $g-3;
 
-        color: $c-gray-light;
+        color: darken($c-gray-light, 15%);
         font-size: $fs-small;
+
+        span {
+          position: relative;
+
+          &:first-child::after {
+            content: "\2192";
+
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            transform: translate(150%, 0);
+          }
+        }
       }
 
       p {
-        display: inline;
+        align-self: center;
+        width: 75%;
       }
     }
   }
@@ -40,18 +70,41 @@
   &__techList {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 
     div {
       display: flex;
       flex-direction: column;
+      align-items: center;
       gap: $g-2;
+      flex-basis: 33%;
     }
 
     ul {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      justify-content: space-around;
       align-items: center;
+      gap: $g-2;
+      flex-wrap: wrap;
+
+      padding: $g-2 2 * $g-2;
+
+      li {
+        padding: $g-1 2 * $g-3 $g-3;
+        border: 1px solid $c-main;
+        border-radius: $bg-r-inf;
+
+        position: relative;
+
+        span {
+          font-size: $fs-small;
+          position: absolute;
+
+          bottom: 0;
+          left: 50%;
+          transform: translate(-50%, -25%);
+        }
+      }
     }
   }
 }

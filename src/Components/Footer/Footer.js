@@ -5,39 +5,19 @@ import { IonIcon } from "@ionic/react";
 import { logoGithub, logoLinkedin } from "ionicons/icons";
 import Button from "../Layout/UI/Button";
 import LanguageContext from "../../Store/language-context";
+import NavButtonList from "../Layout/UI/NavButtonList";
 
 export default function Footer(props) {
-  const [navigableSections, setNavigableSections] = useState([]);
   const languageContext = useContext(LanguageContext);
 
   const content = languageContext.currentContent.footer;
-
-  useEffect(() => {
-    const sections = document.querySelectorAll("section");
-
-    setNavigableSections(
-      Array.from(sections).filter((section) => {
-        return section.id.includes("s-");
-      })
-    );
-  }, [languageContext.currentLanguage]);
 
   return (
     <>
       <footer className={classes["s-footer"]}>
         <div className={classes["s-footer__wrapper"]}>
           <div className={classes["s-footer__linkBox"]}>
-            <ul>
-              {navigableSections.map((section) => {
-                return (
-                  <li key={section.id}>
-                    <Button href={`#${section.id}`} styled={false}>
-                      {section.getAttribute("navname")}
-                    </Button>
-                  </li>
-                );
-              })}
-            </ul>
+            {<NavButtonList styled={false} />}
           </div>
           <div className={classes["s-footer__contactBox"]}>
             <ul>
